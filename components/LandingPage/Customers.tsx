@@ -84,11 +84,8 @@ export default function Customers() {
         <Carousel>
           <CarouselContent>
             {customerData.map((customer, index) => (
-              <CarouselItem>
-                <div
-                  key={index}
-                  className="lg:w-[854px] w-[300px] relative flex flex-col items-end p-3 my-element bg-white border-[#DDDDDD] mx-auto  h-[234.64px] lg:h-[420px] border-4 border-dashed rounded-tl-[50px] rounded-br-[50px]"
-                >
+              <CarouselItem key={index}>
+                <div className="lg:w-[854px] w-[300px] relative flex flex-col items-end p-3 my-element bg-white border-[#DDDDDD] mx-auto  h-[234.64px] lg:h-[420px] border-4 border-dashed rounded-tl-[50px] rounded-br-[50px]">
                   <div className="bg-[#F05B10] p-1  lg:p-6 w-[154.63px] h-[141.38px] lg:w-[385px] lg:h-[352px] rounded-tl-3xl rounded-br-3xl">
                     <div className="flex justify-center lg:gap-3 gap-2 items-center">
                       <div className="flex flex-col gap-1 justify-center items-end">

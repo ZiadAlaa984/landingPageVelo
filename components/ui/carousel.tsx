@@ -4,13 +4,12 @@ import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import curRight from "../../app/img/icons/curRight.png";
 import curLeft from "../../app/img/icons/curLeft.png";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -209,7 +208,8 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "  p-[10px] lg:h-[40px] w-[32px] h-[32px] lg:w-[40px] border-[#434343] rounded-full",
+        " p-[10px] lg:h-[40px] w-[32px] h-[32px] lg:w-[40px] border-[#434343] rounded-full",
+        orientation === "horizontal" ? "" : "  rotate-90",
         className
       )}
       disabled={!canScrollPrev}
@@ -240,6 +240,7 @@ const CarouselNext = React.forwardRef<
       size={size}
       className={cn(
         "  p-[10px] lg:h-[40px] w-[32px] h-[32px] lg:w-[40px] border-[#434343] rounded-full",
+        orientation === "horizontal" ? "" : "  rotate-90",
         className
       )}
       disabled={!canScrollNext}
